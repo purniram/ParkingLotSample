@@ -1,18 +1,29 @@
-public class Car {
+public class Car implements Parkable {
 
-   // private String name;
+    private String name;
 
-    public void park ( ParkingLot p)
+    public Car ( String name)
     {
-
-        p.addCar();
-
+        this.name = name;
     }
 
-    public void unpark ( ParkingLot p)
+    @Override
+    public void park ( ParkingLot parkingLot)
     {
-        p.removeCar();
+
+        if (parkingLot.addVehicle())
+
+           System.out.println ( "car " + this.name + " is parked. No of slots available: "+ parkingLot.availability);
+       else
+            System.out.println ( "car " + this.name + " is not parked. No slots available");
     }
 
+    @Override
+    public void unpark ( ParkingLot parkingLot)
+    {
+        parkingLot.removeVehicle();
+        System.out.println ("car " + this.name + " is un parked. No of slots available: "+ parkingLot.availability);
+
+    }
 
 }

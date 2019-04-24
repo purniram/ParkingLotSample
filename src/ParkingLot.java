@@ -1,7 +1,7 @@
 public class ParkingLot {
 
     private int capacity;
-    private int availability;
+    public int availability;
 
     public  ParkingLot( int capacity)
     {
@@ -18,17 +18,21 @@ public class ParkingLot {
             return false;
     }
 
-    public void addCar() {
+    public boolean addVehicle() {
 
         if(!this.isFull())
 
-        availability --;
+        { availability --;
+           return true; }
         else
-            System.out.println ("No more slots avaialble for another car " );
+        {
+            return false;
+        }
     }
 
-    public void removeCar() {
+    public void removeVehicle() {
 
         availability ++;
+
     }
 }
