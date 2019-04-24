@@ -5,13 +5,13 @@ public class Main {
         //System.out.println("Hello World!");
 
 
-        Parkable car1 = new Car("car1");
-        Parkable car2 = new Car("car2");
-        Parkable car3 = new Car("car3");
+        Vehicle car1 = new Car("car1");
+        Vehicle car2 = new Car("car2");
+        Vehicle car3 = new Car("car3");
 
-        Parkable Jeep1 = new Jeep ("Jeep1");
-        Parkable Jeep2 = new Jeep ("Jeep2");
-        ParkingLot parkingLot = new ParkingLot(2);
+        Vehicle Jeep1 = new Jeep ("Jeep1");
+        Vehicle Jeep2 = new Jeep ("Jeep2");
+        ParkingLot parkingLot = new ParkingLot(6);
 
         car1.park(parkingLot);
         car2.park(parkingLot);

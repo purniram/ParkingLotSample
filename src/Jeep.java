@@ -1,12 +1,11 @@
-public class Jeep implements Parkable{
+public class Jeep extends Vehicle{
 
-    private String name;
-
-    public Jeep ( String name)
-    {
-        this.name = name;
+    protected Jeep(String name) {
+        super(name);
     }
-    @Override
+
+
+   /* @Override
     public void park(ParkingLot parkingLot)
 
     {
@@ -23,5 +22,5 @@ public class Jeep implements Parkable{
 
         parkingLot.removeVehicle();
         System.out.println ("Jeep " + this.name + " is un parked. No of slots available: "+ parkingLot.availability);
-    }
+    } */
 }

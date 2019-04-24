@@ -1,13 +1,13 @@
-public class Car implements Parkable {
+public class Car extends Vehicle {
 
-    private String name;
-
-    public Car ( String name)
-    {
-        this.name = name;
+    protected Car(String name) {
+        super(name);
     }
 
-    @Override
+
+
+
+   /* @Override
     public void park ( ParkingLot parkingLot)
     {
 
@@ -24,6 +24,6 @@ public class Car implements Parkable {
         parkingLot.removeVehicle();
         System.out.println ("car " + this.name + " is un parked. No of slots available: "+ parkingLot.availability);
 
-    }
+    } */
 
 }
